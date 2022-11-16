@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FestivalDataFormatter should format record labels as expected 1`] = `
+"That label
+   Band Awesome
+      Festivals R Amazing
+
+Another label
+   Cool Awesome Band
+      I heart festivals
+
+"
+`;
+
+exports[`FestivalDataFormatter should give bands with empty names but different ids, different placeholder names 1`] = `
+"That label
+   Unnamed Band (0)
+      I heart festivals
+
+Another label
+   Unnamed Band (1)
+      Festivals R Amazing
+      I heart festivals
+
+"
+`;
+
+exports[`FestivalDataFormatter should give festivals with no names, but different ids, different placeholder names 1`] = `
+"That label
+   Band Awesome
+      Festivals R Amazing
+      Unnamed Festival (0)
+      Unnamed Festival (1)
+
+Another label
+   Cool Awesome Band
+      I heart festivals
+      Unnamed Festival (1)
+
+"
+`;

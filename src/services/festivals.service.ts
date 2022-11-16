@@ -1,6 +1,6 @@
 import { FestivalsApi } from "../generated/openapi";
 import { Logger } from "../lib/logger";
-import { FestivalDataMapper } from "./festivals-mapper";
+import { FestivalsDataMapper } from "./festivals-data-mapper";
 
 export class FestivalsService {
   constructor(private api: FestivalsApi, private logger: Logger) {
@@ -22,7 +22,7 @@ export class FestivalsService {
      *
      * However, in this case data we make the argument to mapFestivalData optional`
      */
-     const mapped = FestivalDataMapper.mapFestivalData(response.data)
+     const mapped = FestivalsDataMapper.mapFestivalData(response.data)
 
      return mapped;
   }

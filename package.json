@@ -5,8 +5,10 @@
   "license": "MIT",
   "scripts": {
     "start": "node -r @swc-node/register src/index.ts",
+    "start:prod": "node ./dist/index.js",
     "sdk:generate": "openapi-generator-cli generate -i swagger.json -g typescript-axios -o src/generated/openapi",
-    "build": "swc . -d ./src",
+    "build": "yarn test && yarn compile ",
+    "compile": "swc ./src -d dist",
     "test": "jest"
   },
   "devDependencies": {

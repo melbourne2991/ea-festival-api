@@ -9,7 +9,7 @@ const runScenario = (scenario: string): Promise<string> => {
   })
 };
 
-describe('Festivals (e2e)', () => {
+describe('e2e', () => {
   it('should display festivals data', async () => {
     const result = await runScenario('basic');
 

@@ -1,4 +1,4 @@
-import { Band, Festival, RecordLabel } from "../festivals-mapper";
+import { Band, Festival, RecordLabel } from "../festivals-data-mapper";
 
 
 export const makeBand = (id: string, name: string): Band => ({

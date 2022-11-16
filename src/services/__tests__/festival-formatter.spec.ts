@@ -1,4 +1,4 @@
-import { FestivalDataFormatter } from "../festivals-formatter";
+import { FestivalsDataFormatter } from "../festivals-data-formatter";
 import { addBandToFestival, addBandToRecordLabel, makeBand, makeFestival, makeRecordLabel } from "./helpers";
 
 
@@ -18,7 +18,7 @@ describe('FestivalDataFormatter', () => {
     addBandToRecordLabel(recordLabelA, bandA)
     addBandToRecordLabel(recordLabelB, bandB)
 
-    const result = FestivalDataFormatter.formatFestivalData([
+    const result = FestivalsDataFormatter.formatFestivalData([
       recordLabelA,
       recordLabelB
     ], [
@@ -45,7 +45,7 @@ describe('FestivalDataFormatter', () => {
     addBandToRecordLabel(recordLabelA, bandB)
     addBandToRecordLabel(recordLabelB, bandA)
 
-    const result = FestivalDataFormatter.formatFestivalData([
+    const result = FestivalsDataFormatter.formatFestivalData([
       recordLabelA,
       recordLabelB
     ], [
@@ -76,7 +76,7 @@ describe('FestivalDataFormatter', () => {
     addBandToRecordLabel(recordLabelA, bandA)
     addBandToRecordLabel(recordLabelB, bandB)
 
-    const result = FestivalDataFormatter.formatFestivalData([
+    const result = FestivalsDataFormatter.formatFestivalData([
       recordLabelA,
       recordLabelB
     ], [
@@ -100,7 +100,7 @@ describe('FestivalDataFormatter', () => {
     addBandToFestival(festivalA, bandA)
     addBandToFestival(festivalB, bandB)
 
-    const result = FestivalDataFormatter.formatFestivalData([
+    const result = FestivalsDataFormatter.formatFestivalData([
       recordLabelA,
       recordLabelB
     ], [
@@ -113,7 +113,7 @@ describe('FestivalDataFormatter', () => {
   });
 
   it('should show "No data to display." when there is no data', () => {
-    const result = FestivalDataFormatter.formatFestivalData([], [])
+    const result = FestivalsDataFormatter.formatFestivalData([], [])
     expect(result).toEqual('No data to display.\n')
   });
 })

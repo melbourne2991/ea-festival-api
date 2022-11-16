@@ -3,7 +3,7 @@ import { Logger } from "../../lib/logger";
 import { FestivalsService } from "../festivals.service";
 import { PrinterService } from "../printer.service";
 
-describe("Integration (Festival)", () => {
+describe("Integration", () => {
   let printerService: PrinterService;
   let festivalsApi: FestivalsApi;
 
@@ -49,7 +49,7 @@ describe("Integration (Festival)", () => {
         data: festivals,
       } as any);
 
-    jest.spyOn(console, 'log')
+    jest.spyOn(console, 'log').mockImplementation(() => {})
 
     printerService.print();
 

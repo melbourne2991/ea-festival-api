@@ -1,10 +1,10 @@
-import { Band, Festival, RecordLabel } from "./festivals-mapper";
+import { Band, Festival, RecordLabel } from "./festivals-data-mapper";
 
 interface NoRecordLabel extends Omit<RecordLabel, 'id'> {
   id: symbol
 }
 
-export class FestivalDataFormatter {
+export class FestivalsDataFormatter {
   public static formatFestivalData(recordLabels: RecordLabel[], bands: Band[]) {
     const formatter = new this()
     return formatter.formatFestivalData(recordLabels, bands)
@@ -76,7 +76,7 @@ export class FestivalDataFormatter {
     return festivals
       .map((festival) => {
         const name = this.getName("festival", festival, "Festival");
-        return `${FestivalDataFormatter.indent(6)}${name}\n`;
+        return `${FestivalsDataFormatter.indent(6)}${name}\n`;
       })
       .join("");
   };
@@ -85,7 +85,7 @@ export class FestivalDataFormatter {
     return bands
       .map((band) => {
         const name = this.getName("band", band, "Band");
-        return `${FestivalDataFormatter.indent(3)}${name}\n${this.formatFestivals(band.festivals)}`;
+        return `${FestivalsDataFormatter.indent(3)}${name}\n${this.formatFestivals(band.festivals)}`;
       })
       .join("");
   };

@@ -24,7 +24,7 @@ export type Table<T> = {
   byId: Record<string, T>;
 };
 
-export class FestivalDataMapper {
+export class FestivalsDataMapper {
   static mapFestivalData(rawData: FestivalDTO[] = []) {
     const mapped = new this(rawData)
 
