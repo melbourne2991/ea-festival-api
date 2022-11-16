@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Integration (Festival) should print out festival data 1`] = `
+"That label
+   Cool band
+      Festival 1
+
+Another label
+   Another band
+      Festival 2
+
+"
+`;
