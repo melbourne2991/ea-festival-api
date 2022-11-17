@@ -3,12 +3,17 @@
 ## Usage
 Ensure you have node >= v18.12.1 installed on your system and yarn.
 
-Install all dependencies
+1. Install all dependencies
 ```
 yarn
 ```
 
-To run
+2. Configure environment variables
+```
+cp .env.template .env
+```
+
+To run (dev)
 ```
 yarn start
 ```
